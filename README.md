@@ -23,8 +23,8 @@ classDiagram
     Usuario --> "1..*" Queja: registra
     Usuario --> "1..*" Rol
     Carrito --> EstadoCarrito
-    Carrito -- RegistroProducto
-    RegistroProducto --> Producto
+    Carrito -- "1..*" RegistroProducto
+    RegistroProducto "1..*" -- Producto
     Queja --> EstadoQueja
     Producto --> Categoria
 
