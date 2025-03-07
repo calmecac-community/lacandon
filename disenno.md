@@ -1,27 +1,59 @@
 # Lacandon
 
+## Diagrama de contexto para la plataforma
+
+Un Diagrama de Contexto de Sistema (DCS) en Ingeniería de software e Ingeniería de sistemas es un diagrama que define los límites entre el sistema, o parte del sistema, y su ambiente, mostrando las entidades que interactúan con él.2​ Este diagrama es una vista de alto nivel de un sistema.
+
+A continuación se muestra el diagrama de contexto para **Lacandon**:
+
 ```mermaid
     C4Context
-      title Diagrama de contexto para Lacandon
-      Person(Cliente, "Cliente de lacandon")
-      Person(Operador, "Operador de lacandon")
+      Person(Cliente, "Cliente")
+      Person(Operador, "Operador")
       
       Enterprise_Boundary(b0, "Plataforma Lacandon") {
 
-        System(Auth, "Autenticación y autorización")
-        System(GestorVentas, "Gestor de ventas")
-        System(GestorOperaciones, "Gestor de operaciones")
-        System(GestorQuejas, "Gestor de quejas")
-        System(GestorInventario, "Gestor de inventario")
-        System(GestorProveedores, "Gestor de proveedores")
+        System(Auth, "Autenticación y<br> Autorización")
+        System(GestorVentas, "Gestor de<br> ventas")
+        System(GestorOperaciones, "Gestor de<br> operaciones")
+        System(GestorQuejas, "Gestor de<br> quejas")
+        System(GestorInventario, "Gestor de<br> inventario")
+        System(GestorProveedores, "Gestor de<br> proveedores")
 
         UpdateElementStyle(Auth, $bgColor="red")
-        UpdateElementStyle(GestorQuejas, $bgColor="ligthblue")
       }
 
 ```
 
-En la siguiente figura, se muestra el modelo de dominio simplificado para el proyecto de lacando:
+Funcionalidades del **Cliente**
+
+```mermaid
+    C4Context
+      Person(Cliente, "Cliente")
+      
+      Enterprise_Boundary(b0, "Plataforma Lacandon") {
+
+        System(Auth, "Autenticación y<br> Autorización")
+        System(GestorVentas, "Gestor de<br> ventas")
+        System(GestorQuejas, "Gestor de<br> quejas")
+
+        Rel(Cliente, Auth, "iniciar sesión")
+        Rel(Cliente, GestorVentas, "Comprar productos")
+        Rel(Cliente, GestorQuejas, "Registrar quejas")
+
+        UpdateElementStyle(Auth, $bgColor="red")
+        UpdateRelStyle(Cliente, GestorVentas, $offsetX="-50", $offsetY="50")
+        UpdateRelStyle(Cliente, GestorQuejas, $offsetX="200", $offsetY="87")
+
+      }
+
+```
+
+## Modelo de dominio
+
+Un modelo de dominio es una representación de los conceptos, reglas y relaciones que definen un dominio de problema.
+
+En la siguiente figura, se muestra el modelo de dominio simplificado para la plataforma **Lacandon**:
 
 
 ```mermaid
@@ -121,7 +153,13 @@ classDiagram
     }
 ```
 
-Diagrama de estados para el carrito de compra
+## Diagrama de estados
+
+El diagrama de estados es un diagrama de comportamiento usado para especificar el comportamiento de una parte del sistema diseñado a través de transiciones de estados finitos. Es utilizado para mostrar los estados por los que pasa un componente de un sistema de información.
+
+### Diagrama de estados para el carrito de compra
+
+A continuación se muestra el diagrama de estados para el Objeto **Carrito de Compra**
 
 ```mermaid
 %%{
@@ -148,7 +186,9 @@ stateDiagram
     }
 ```
 
-Diagrama de estados para la administración de una queja
+### Diagrama de estados para la administración de una queja
+
+A continuación se muestra el diagrama de estados para el Objeto **Queja**
 
 ```mermaid
 %%{
@@ -174,3 +214,19 @@ stateDiagram
 
     }
 ```
+
+
+```plantuml
+@startuml
+    skinparam backgroundColor #EEEBDC
+    skinparam handwritten true
+    actor Customer
+    Customer -> "login()" : username & password
+    "login()" -> Customer : session token
+    activate "login()"
+    Customer -> "placeOrder()" : session token, order info
+    "placeOrder()" -> Customer : ok
+    Customer -> "logout()"
+    "logout()" -> Customer : ok
+    deactivate "login()"
+@enduml
