@@ -68,7 +68,7 @@ Los casos de uso son
 
 ### Gestor de Ventas
 
-![Gestor de ventas](../doc/plantuml-out/doc/casos-de-uso/auth/ventas.svg)
+![Gestor de ventas](../doc/plantuml-out/doc/casos-de-uso/ventas/ventas.svg)
 
 
 ### Gestor de operaciones
