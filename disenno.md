@@ -1,5 +1,25 @@
 # Lacandon
 
+```mermaid
+    C4Context
+      title Diagrama de contexto para Lacandon
+      Person(Cliente, "Cliente de lacandon")
+      Person(Operador, "Operador de lacandon")
+      
+      Enterprise_Boundary(b0, "Plataforma Lacandon") {
+
+        System(Auth, "Autenticación y autorización")
+        System(GestorVentas, "Gestor de ventas")
+        System(GestorOperaciones, "Gestor de operaciones")
+        System(GestorQuejas, "Gestor de quejas")
+        System(GestorInventario, "Gestor de inventario")
+        System(GestorProveedores, "Gestor de proveedores")
+
+        UpdateElementStyle(Auth, $bgColor="red")
+        UpdateElementStyle(GestorQuejas, $bgColor="ligthblue")
+      }
+
+```
 
 En la siguiente figura, se muestra el modelo de dominio simplificado para el proyecto de lacando:
 
