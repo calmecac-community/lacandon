@@ -14,3 +14,10 @@ Antes de comenzar, deberás de verificar que tienes instalados los siguientes el
 - Algún cliente Rest como: [Insomnia](https://insomnia.rest/), [Postman](https://www.postman.com/) o [CURL](https://curl.se/)
 
 Siempre hay que instalar la **versión LTS** de cada componente.
+
+
+Cambiar el nombre de la rama master a main:
+
+```shell
+git branch -m master main
+```
