@@ -2,14 +2,19 @@
 left to right direction
 skinparam actorStyle awesome
 
-package Usuarios {
+skinparam usecase {
+  BackgroundColor SkyBlue
+  BorderColor LightSkyBlue
+}
+
+package Usuarios #BUSINESS{
   actor User
-  actor Operador
+  actor Operador #IMPLEMENTATION
 
   User <|-- Operador
 }
 
-package "Gestor de inventario" {
+package "Gestor de inventario" #APPLICATION {
   usecase "<b>(1)</b> Consultar inventario" as consultarProductos
   usecase "<b>(2)</b> Registrar un nuevo producto" as registrarProducto
   usecase "<b>(3)</b> Ver Detalle \nde un producto" as verProducto

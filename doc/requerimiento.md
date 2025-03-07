@@ -12,15 +12,15 @@ Lacandón está conformada por 5 grandes áreas de proceso:
 4. Gestión de inventario
 5. Gestión de proveedores
 
-El área de gestión de ventas se encarga de registrar, actualizar y ofrecer los productos que la empresa vende.
+El **área de gestión de ventas** se encarga de registrar, actualizar y ofrecer los productos que la empresa vende.
 
-El área de gestión de operaciones, se encarga de revisar, validar y aprobar las ventas realizadas por la empresa
+El **área de gestión de operaciones**, se encarga de revisar, validar y aprobar las ventas realizadas por la empresa
 
-El área de gestión de quejas, es la responsable de atender las quejas realizadas por clientes insatisfechos y se asegura que el cliente quede contento con los productos ofrecidos.
+El **área de gestión de quejas**, es la responsable de atender las quejas realizadas por clientes insatisfechos y se asegura que el cliente quede contento con los productos ofrecidos.
 
-El área de gestión de inventario, es la encargada de administrar todo el inventario que llega al negocio; desde su registro, hasta su entrega.
+El **área de gestión de inventario**, es la encargada de administrar todo el inventario que llega al negocio; desde su registro, hasta su entrega.
 
-El área de gestión de proveedores, tiene como responsabilidad la contratación, y administración de proveedores que ofrecen productos y servicios a la empresa.
+El **área de gestión de proveedores**, tiene como responsabilidad la contratación, y administración de proveedores que ofrecen productos y servicios a la empresa.
 
 # Necesidad del negocio
 
@@ -156,21 +156,15 @@ Los requerimientos no funcionales para la  digitalización de punta a punta del
 **Eficiencia**
 
 - Toda funcionalidad del sistema y transacción de negocio debe responder al usuario en menos de 5 segundos.
-
 - El sistema debe ser capaz de operar adecuadamente con hasta 100.000 usuarios con sesiones concurrentes.
-
 - Los datos modificados en la base de datos deben ser actualizados para todos los usuarios que acceden en menos de 2 segundos.
 
 **Seguridad**
 
 - Los permisos de acceso al sistema podrán ser cambiados solamente por el administrador de acceso a datos.
-
 - El nuevo sistema debe desarrollarse aplicando patrones y recomendaciones de programación que incrementen la seguridad de datos.
-
 - Todos los sistemas deben respaldarse cada 24 horas. Los respaldos deben ser almacenados en una localidad segura ubicada en un edificio distinto al que reside el sistema.
-
 - Todas las comunicaciones externas entre servidores de datos, aplicación y cliente del sistema deben estar encriptadas utilizando el algoritmo RSA.
-
 - Todas las comunicaciones externas entre servidores de datos, aplicación y cliente del sistema deben realizarse por medio de redes privadas virtuales (VPN).
 
 - Si se identifican ataques de seguridad o brecha del sistema, el mismo no continuará operando hasta ser desbloqueado por un administrador de seguridad.
@@ -178,19 +172,12 @@ Los requerimientos no funcionales para la  digitalización de punta a punta del
 **Usabilidad**
 
 - El tiempo de aprendizaje del sistema por un usuario deberá ser menor a 4 horas.
-
 - La tasa de errores cometidos por el usuario deberá ser menor del 1% de las transacciones totales ejecutadas en el sistema.
-
 - El sistema debe contar con manuales de usuario estructurados adecuadamente.
-
 - El sistema debe proporcionar mensajes de error que sean informativos y orientados al usuario final.
-
 - El sistema debe contar con un módulo de ayuda en línea.
-
 - La aplicación web debe poseer un diseño “Responsive” a fin de garantizar la adecuada visualización en múltiples computadores personales, dispositivos tablets y teléfonos inteligentes.
-
 - El sistema debe poseer interfaces gráficas bien formadas.
-
 - El aplicativo deberá de utilizar los lenguajes de español e inglés
 
 ## Metodología

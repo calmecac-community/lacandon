@@ -1,20 +1,24 @@
 @startuml auth
 left to right direction
 skinparam actorStyle awesome
-
+skinparam usecase {
+  BackgroundColor IndianRed
+  BorderColor IndianRed
+  FontColor #white
+}
 
 actor "Anónimo" as Anonimo
 
-package Usuarios {
-  actor Cliente
-  actor Operador
+package Usuarios #BUSINESS{
+  actor Cliente #APPLICATION
+  actor Operador #IMPLEMENTATION
 
   User <|-- Cliente
   User <|-- Operador
 }
 
 
-package "Autenticación y Autorización" {
+package "Autenticación y Autorización" #IMPLEMENTATION {
   usecase "registrarse" as registro
   usecase "iniciar sesión" as login
 }

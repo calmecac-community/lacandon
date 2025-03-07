@@ -1,12 +1,18 @@
-# Plataforma Lacandon
-
-La digitalización es disruptiva y provoca cambios discontinuos, pero es un elemento clave para la creación de nuevo valor y la generación de ingresos, oportunidades para la competitividad del mercado. El cambio climático, las pandemias, la devastación ambiental y las crecientes desigualdades sociales han creado una comprensión abrupta a tal grado que los modelos de negocios existentes ya no son “adecuados para su propósito”. Se requieren nuevas prácticas, habilidades, procesos operativos y modelos de negocio para utilizar otros mecanismos como lo son la digitalización y la Inteligencia Artificial para crear valor para los clientes. Es cada vez más importante que las empresas comprendan el entorno en evolución para asimilarlo y convertirlo en una capacidad en el mercado y luego innovar para obtener una ventaja competitiva. Además de maximizar las ganancias, las empresas enfrentan presión para concentrarse en lograr sus objetivos no financieros. Los elementos interconectados de los aspectos ambientales, sociales y gobernanza han proporcionado un catalizador para transformar a las empresas para que sean más responsables con el planeta y las personas a la hora de perseguir la rentabilidad y el crecimiento. “Los analfabetos del siglo XXI no serán los que no sepan leer ni escribir, sino los que no sepan aprender, desaprender y reaprender”. Las nuevas habilidades de refinar, adaptar, revisar y reformular un modelo de negocio proporcionan a las empresas una nueva hoja de ruta para lograr objetivos holísticos aprovechando las ventajas estratégicas de las tecnologías; últimamente la digitalización y automatización de procesos han ofrecido una alternativa atractiva pero no estandarizada. Las transformaciones digitales crean un nuevo potencial para que las organizaciones redefinan y optimicen sus operaciones reconociendo el papel de la automatización  en la creación de un diferencial en el mercado y excelencia en el servicio. La pandemia de COVID-19 afectó funciones comerciales críticas en todas las organizaciones a nivel mundial, sirviendo así como un acelerador de las transformaciones digitales y la reconfiguración de modelos de negocio estáticos. La pandemia afectó la forma en que las personas operan y se brindan los servicios al cliente, particularmente sobre todo cuando los gobiernos impusieron cierres regulados para proteger la vida humana. Según la teoría institucional, las presiones internas y externas aceleran el deseo o compulsión de transformar una organización. Una de esas presiones es la digitalización disruptiva de la tecnología que ocurrió con la pandemia. La fuerza laboral tradicional también se ha transformado en una mezcla de humanos que trabajan en colaboración con el software para crear valor a una organización. Este tipo de colaboración entre humanos y software es conocido como los sistemas socio-técnicos. 
+# 🌳 Plataforma Lacandon
 
 
-Los sistemas socio-técnicos son cada vez más complejos y cada vez más automatizados. Aunque ahora se considera ampliamente que el error humano juega un papel clave en la mayoría de las fallas del sistema, cada vez se reconoce más la simplificación excesiva inherente a tal visión. 
+👋🏼 Bienvenido a la plataforma Lacandon 🛒
 
-El término sistema socio-técnico fue originalmente usado para designar la interacción obrero – máquina en ambientes de trabajo industrial. Actualmente se ha extendido su alcance para abarcar las complejas interacciones entre la tecnología y las personas, así como sus consecuencias psicológicas y culturales (observando siempre la razón con lo real y no pensado).
+## Secciones
 
-Es así que la mayoría de los sistemas de software que se desarrollan en la actualidad son de tipo socio-técnico, donde el objetivo de un sistema de software es automatizar las operaciones realizadas por un proceso organizacional, mismo que es realizado a través de personas empleando herramientas digitales que ayuden en la automatización de sus tareas cotidianas. 
+1. [Motivación](doc/motivacion.md)
+2. [Requerimientos](doc/requerimiento.md)
+3. [Análisis y diseño](doc/analisis.md)
+4. [Implementación](doc/implementacion.md)
+5. [Puesta en operación (Próximamente)](doc/operacion.md)
 
-Por esta razón, el proyecto final del bootcamp, tiene como objetivo la realización de un sistema socio-técnico que ayude a la digitalización de procesos de un negocio u organización.
+[![License: MIT](https://cdn.prod.website-files.com/5e0f1144930a8bc8aace526c/65dd9eb5aaca434fac4f1c34_License-MIT-blue.svg)](/LICENSE)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Postgres](https://img.shields.io/badge/Postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)

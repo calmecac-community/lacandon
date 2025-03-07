@@ -1,10 +1,14 @@
 @startuml ventas
 left to right direction
 skinparam actorStyle awesome
+skinparam usecase {
+  BackgroundColor SkyBlue
+  BorderColor LightSkyBlue
+}
 
-actor Cliente as cliente
+actor Cliente <<User>> #APPLICATION
 
-rectangle "Gestor de ventas" {
+rectangle "Gestor de ventas" #APPLICATION {
   usecase "<b>(1)</b> Consultar pedidos" as consultarPedidos
   usecase "<b>(2)</b>Registrar nuevo pedido" as registrarPedido
   usecase "<b>(2.1)</b>Editar pedido" as editarPedido
@@ -16,9 +20,9 @@ editarPedido .> registrarPedido: extends
 buscarProductos .> editarPedido: extends
 agregarProducto .> editarPedido: extends
 
-cliente --> consultarPedidos
-cliente --> registrarPedido
-cliente --> buscarProductos
-cliente --> agregarProducto
+Cliente --> consultarPedidos
+Cliente --> registrarPedido
+Cliente --> buscarProductos
+Cliente --> agregarProducto
 
 @enduml

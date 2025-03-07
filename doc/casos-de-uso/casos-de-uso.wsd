@@ -1,0 +1,38 @@
+@startuml casos-de-uso
+left to right direction
+skinparam actorStyle awesome
+
+actor "Anónimo" as Anonimo
+
+package Usuarios #BUSINESS {
+  actor User
+  actor Operador #IMPLEMENTATION
+  actor Cliente #APPLICATION
+
+  User <|-- Operador
+  User <|-- Cliente
+}
+
+package "Lacandon" {
+  package "Autenticación y Autorización" as auth #IMPLEMENTATION
+  package "Gestor de ventas" as ventas #APPLICATION
+  package "Gestor de operaciones" as operaciones #APPLICATION
+  package "Gestor de quejas" as quejas #APPLICATION
+  package "Gestor de inventario" as inventario #APPLICATION
+  package "Gestor de proveedores" as proveedores #APPLICATION
+}
+
+Anonimo -up-> auth
+
+Cliente --> auth
+Cliente --> ventas
+Cliente --> quejas
+
+Operador --> auth
+Operador --> operaciones
+Operador --> quejas
+Operador --> inventario
+Operador --> proveedores
+
+
+@enduml
