@@ -1,0 +1,29 @@
+@startuml inventario
+left to right direction
+skinparam actorStyle awesome
+
+package Usuarios {
+  actor User
+  actor Operador
+
+  User <|-- Operador
+}
+
+package "Gestor de inventario" {
+  usecase "<b>(1)</b> Consultar inventario" as consultarProductos
+  usecase "<b>(2)</b> Registrar un nuevo producto" as registrarProducto
+  usecase "<b>(3)</b> Ver Detalle \nde un producto" as verProducto
+  usecase "<b>(3.1)</b> Editar un producto" as editarProducto
+  usecase "<b>(4)</b> Eliminar un producto" as eliminarProducto
+}
+
+
+editarProducto .> verProducto: extend
+
+Operador --> consultarProductos
+Operador --> registrarProducto
+Operador --> verProducto
+Operador --> editarProducto
+Operador --> eliminarProducto
+
+@enduml

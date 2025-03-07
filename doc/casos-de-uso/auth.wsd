@@ -1,0 +1,26 @@
+@startuml auth
+left to right direction
+skinparam actorStyle awesome
+
+
+actor "Anónimo" as Anonimo
+
+package Usuarios {
+  actor Cliente
+  actor Operador
+
+  User <|-- Cliente
+  User <|-- Operador
+}
+
+
+package "Autenticación y Autorización" {
+  usecase "registrarse" as registro
+  usecase "iniciar sesión" as login
+}
+
+Anonimo -up-> registro
+Cliente --> login
+Operador --> login
+
+@enduml

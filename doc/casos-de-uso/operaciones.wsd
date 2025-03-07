@@ -1,0 +1,19 @@
+@startuml operaciones
+left to right direction
+skinparam actorStyle awesome
+
+package Usuarios {
+  actor Operador
+  User <|-- Operador
+}
+rectangle "Gestor de operaciones" {
+  usecase "Consultar pedidos" as consultarPedido
+  usecase "Ver detalle de un pedido" as verPedido
+  usecase "Editar un pedido" as editarPedido
+}
+
+Operador --> consultarPedido
+Operador --> verPedido
+Operador --> editarPedido
+
+@enduml

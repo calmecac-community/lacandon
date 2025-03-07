@@ -1,17 +1,6 @@
-# 1. Introducción
-
-La digitalización es disruptiva y provoca cambios discontinuos, pero es un elemento clave para la creación de nuevo valor y la generación de ingresos, oportunidades para la competitividad del mercado. El cambio climático, las pandemias, la devastación ambiental y las crecientes desigualdades sociales han creado una comprensión abrupta a tal grado que los modelos de negocios existentes ya no son “adecuados para su propósito”. Se requieren nuevas prácticas, habilidades, procesos operativos y modelos de negocio para utilizar otros mecanismos como lo son la digitalización y la Inteligencia Artificial para crear valor para los clientes. Es cada vez más importante que las empresas comprendan el entorno en evolución para asimilarlo y convertirlo en una capacidad en el mercado y luego innovar para obtener una ventaja competitiva. Además de maximizar las ganancias, las empresas enfrentan presión para concentrarse en lograr sus objetivos no financieros. Los elementos interconectados de los aspectos ambientales, sociales y gobernanza han proporcionado un catalizador para transformar a las empresas para que sean más responsables con el planeta y las personas a la hora de perseguir la rentabilidad y el crecimiento. “Los analfabetos del siglo XXI no serán los que no sepan leer ni escribir, sino los que no sepan aprender, desaprender y reaprender”. Las nuevas habilidades de refinar, adaptar, revisar y reformular un modelo de negocio proporcionan a las empresas una nueva hoja de ruta para lograr objetivos holísticos aprovechando las ventajas estratégicas de las tecnologías; últimamente la digitalización y automatización de procesos han ofrecido una alternativa atractiva pero no estandarizada. Las transformaciones digitales crean un nuevo potencial para que las organizaciones redefinan y optimicen sus operaciones reconociendo el papel de la automatización  en la creación de un diferencial en el mercado y excelencia en el servicio. La pandemia de COVID-19 afectó funciones comerciales críticas en todas las organizaciones a nivel mundial, sirviendo así como un acelerador de las transformaciones digitales y la reconfiguración de modelos de negocio estáticos. La pandemia afectó la forma en que las personas operan y se brindan los servicios al cliente, particularmente sobre todo cuando los gobiernos impusieron cierres regulados para proteger la vida humana. Según la teoría institucional, las presiones internas y externas aceleran el deseo o compulsión de transformar una organización. Una de esas presiones es la digitalización disruptiva de la tecnología que ocurrió con la pandemia. La fuerza laboral tradicional también se ha transformado en una mezcla de humanos que trabajan en colaboración con el software para crear valor a una organización. Este tipo de colaboración entre humanos y software es conocido como los sistemas socio-técnicos. 
-
-Los sistemas socio-técnicos son cada vez más complejos y cada vez más automatizados. Aunque ahora se considera ampliamente que el error humano juega un papel clave en la mayoría de las fallas del sistema, cada vez se reconoce más la simplificación excesiva inherente a tal visión. 
-
-El término sistema socio-técnico fue originalmente usado para designar la interacción obrero – máquina en ambientes de trabajo industrial. Actualmente se ha extendido su alcance para abarcar las complejas interacciones entre la tecnología y las personas, así como sus consecuencias psicológicas y culturales (observando siempre la razón con lo real y no pensado).
-
-Es así que la mayoría de los sistemas de software que se desarrollan en la actualidad son de tipo socio-técnico, donde el objetivo de un sistema de software es automatizar las operaciones realizadas por un proceso organizacional, mismo que es realizado a través de personas empleando herramientas digitales que ayuden en la automatización de sus tareas cotidianas. 
-
-Por esta razón, el proyecto final del bootcamp, tiene como objetivo la realización de un sistema socio-técnico que ayude a la digitalización de procesos de un negocio u organización.
 
 
-# 2. Descripción del negocio
+# Descripción del negocio
 
 Lacandon es una corporación mexicana de comercio electrónico y servicios de computación en la nube a todos los niveles con sede en la ciudad de méxico.​ Su lema es: De la A a la Z. Es una de las primeras grandes compañías en vender bienes a través de Internet y actualmente es la más importante en el país. Los productos que ofrece son variados y de todo tipo,
 
@@ -33,11 +22,11 @@ El área de gestión de inventario, es la encargada de administrar todo el inven
 
 El área de gestión de proveedores, tiene como responsabilidad la contratación, y administración de proveedores que ofrecen productos y servicios a la empresa.
 
-# 3. Necesidad del negocio
+# Necesidad del negocio
 
 La empresa Lacandón busca aumentar su presencia en el mercado brindando una experiencia simple y rápida en sus ventas, busca obtener una aplicación de software en la que sus clientes puedan realizar sus compras con total confianza y seguridad, y de igual manera procesar los reportes mensuales de ventas. Así mismo, se busca automatizar el mayor número de áreas de proceso con la finalidad de maximizar las ventas de la empresa.
 
-# 4. Descripción del proyecto
+# Descripción del proyecto
 
 ## Objetivo general 
 
@@ -204,7 +193,7 @@ Los requerimientos no funcionales para la  digitalización de punta a punta del
 
 - El aplicativo deberá de utilizar los lenguajes de español e inglés
 
-## 5. Metodología
+## Metodología
 
 En la presente sección se va a describir lo que es un proyecto y el proceso o flujo de trabajo que se lleva a cabo con el fin de satisfacerlo. Explicar el proyecto desde el punto de vista del proceso que se sigue para atenderlo, nos permitirá entender cuáles son los principales productos de trabajo que se necesitan y deducir una estructura útil que nos ayude a resguardarlos. El proceso o flujo de trabajo descrito en esta sección es un resumen muy general de las prácticas de desarrollo de software.
 
@@ -239,13 +228,13 @@ Estructura documental de un proyecto o plataforma
 El proyecto, se deberá de llevar con un enfoque de desarrollo ágil, que permita dar seguimiento de manera periódica y que se pueda ir revisando el estado del proyecto de manera iterativa e incremental.
 
 
-## 6. Lista de herramientas
+## Lista de herramientas
 
 1. Visual studio code
 2. Staruml
 
 
-## 6. Entregables del proyecto
+## Entregables del proyecto
 
 - **Código Fuente:**
   - **Repositorio en github**
@@ -254,7 +243,7 @@ El proyecto, se deberá de llevar con un enfoque de desarrollo ágil, que permit
 - **Presentación:** 
   - Presentación de 30 minutos empleando la práctica del **sprint review**
 
-## 7. Evaluación del proyecto
+## Evaluación del proyecto
 
 La evaluación del proyecto se llevará a cabo mediante el checklist definido en el siguiente vínculo:
 

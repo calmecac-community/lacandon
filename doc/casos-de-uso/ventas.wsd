@@ -1,0 +1,24 @@
+@startuml ventas
+left to right direction
+skinparam actorStyle awesome
+
+actor Cliente as cliente
+
+rectangle "Gestor de ventas" {
+  usecase "<b>(1)</b> Consultar pedidos" as consultarPedidos
+  usecase "<b>(2)</b>Registrar nuevo pedido" as registrarPedido
+  usecase "<b>(2.1)</b>Editar pedido" as editarPedido
+  usecase "<b>(2.2)</b>Buscar productos" as buscarProductos
+  usecase "<b>(2.3)</b>Agregar producto al carrito" as agregarProducto
+}
+
+editarPedido .> registrarPedido: extends
+buscarProductos .> editarPedido: extends
+agregarProducto .> editarPedido: extends
+
+cliente --> consultarPedidos
+cliente --> registrarPedido
+cliente --> buscarProductos
+cliente --> agregarProducto
+
+@enduml

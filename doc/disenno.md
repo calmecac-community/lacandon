@@ -49,6 +49,38 @@ Funcionalidades del **Cliente**
 
 ```
 
+## Casos de uso
+
+Los casos de uso son
+
+### Autenticación y autorización
+
+![Autenticacion y autorización](../doc/plantuml-out/doc/casos-de-uso/auth/auth.svg)
+
+### Gestor de proveedores
+
+![Gestor de proveedores](../doc/plantuml-out/doc/casos-de-uso/proveedores/proveedores.svg)
+
+### Gestor de inventario
+
+![Gestor de inventario](../doc/plantuml-out/doc/casos-de-uso/inventario/inventario.svg)
+
+
+### Gestor de Ventas
+
+![Gestor de ventas](../doc/plantuml-out/doc/casos-de-uso/auth/ventas.svg)
+
+
+### Gestor de operaciones
+
+![Gestor de operaciones](../doc/plantuml-out/doc/casos-de-uso/operaciones/operaciones.svg)
+
+
+### Gestor de quejas
+
+![Gestor de quejas](../doc/plantuml-out/doc/casos-de-uso/quejas/quejas.svg)
+
+
 ## Modelo de dominio
 
 Un modelo de dominio es una representación de los conceptos, reglas y relaciones que definen un dominio de problema.

@@ -1,0 +1,21 @@
+@startuml quejas
+left to right direction
+skinparam actorStyle awesome
+
+actor Operador <<User>>
+actor Cliente <<User>>
+
+package "Gestor de quejas" {
+  usecase "<b>(1)</b> Consultar quejas" as consultarQuejas
+  usecase "<b>(2)</b> Registrar una nueva queja" as registrarQueja
+  usecase "<b>(3)</b> Editar una Queja" as editarQueja
+}
+
+Operador -up-> consultarQuejas
+Operador -up-> editarQueja
+
+Cliente --> consultarQuejas
+Cliente --> editarQueja
+Cliente --> registrarQueja
+
+@enduml

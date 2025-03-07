@@ -1,0 +1,27 @@
+@startuml proveedores
+left to right direction
+skinparam actorStyle awesome
+
+package Usuarios {
+  actor Operador
+  User <|-- Operador
+}
+
+package "Gestor de proveedores" {
+  usecase "<b>(1)</b> Consultar proveedores" as consultarProveedores
+  usecase "<b>(2)</b> Registrar un nuevo proveedor" as registrarProveedor
+  usecase "<b>(3)</b> Ver Detalle \nde un proveedor" as verProveedor
+  usecase "<b>(3.1)</b> Editar un proveedor" as editarProveedor
+  usecase "<b>(4)</b> Eliminar un proveedor" as eliminarProveedor
+}
+
+
+editarProveedor .> verProveedor: extend
+
+Operador --> consultarProveedores
+Operador --> registrarProveedor
+Operador --> verProveedor
+Operador --> editarProveedor
+Operador --> eliminarProveedor
+
+@enduml
