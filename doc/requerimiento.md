@@ -1,6 +1,4 @@
-
-
-# Descripción del negocio
+# :pencil: Requerimientos
 
 Lacandon es una corporación mexicana de comercio electrónico y servicios de computación en la nube a todos los niveles con sede en la ciudad de méxico.​ Su lema es: De la A a la Z. Es una de las primeras grandes compañías en vender bienes a través de Internet y actualmente es la más importante en el país. Los productos que ofrece son variados y de todo tipo,
 
@@ -32,7 +30,6 @@ La empresa Lacandón busca aumentar su presencia en el mercado brindando una exp
 
 Definir, diseñar, e implementar un sistema de software que permita la digitalización de punta a punta del proceso principal de la empresa **lacandón**, con la finalidad de optimizar las tareas operativas y maximizar las ventas.
 
-
 ## Objetivos específicos
 
 1. Definir el **modelo general de procesos** para la empresa lacandón, con la finalidad de visualizar los principales procesos y flujos que se deberán de automatizar.
@@ -51,7 +48,6 @@ Definir, diseñar, e implementar un sistema de software que permita la digitaliz
 
 8. Crear un **plan de trabajo** con las historias de usuarios y actividades que se deberán de considerar durante la realización del proyecto, con la finalidad de contar con un mecanismo de seguimiento y control del proceso de digitalización de la empresa lacandón.
 
-
 ## Alcance del Proyecto:
 
 El proyecto de digitalización de procesos está conformado por los siguiente módulos:
@@ -64,14 +60,12 @@ El proyecto de digitalización de procesos está conformado por los siguiente m�
 
 A continuación, se describen las funcionalidades requeridas por cada módulo en términos de historias de usuarios y sus respectivos criterios de aceptación:
 
-
 ### Gestor de ventas
 
 El gestor de ventas está conformado de los siguientes submódulos:
 
 1. Registro de pedidos
 2. Consulta de pedidos
-
 
 #### Registro de pedidos:
 
@@ -93,13 +87,11 @@ Como Cliente,  quiero llevar a cabo la compra de los productos contenidos en mi
 
 Como Cliente,  quiero registrar la dirección a la que me deberán de llegar mis productos, con la finalidad de que mis productos lleguen al lugar correcto.
 
-
 #### Consulta de pedidos
 
 Como Cliente,  quiero consultar la lista de pedidos que he realizado, con la finalidad de consultar el estado en el que se encuentra cada uno y poder administrarlos.
 
 Como Cliente,  quiero consultar el detalle de un pedido, con la finalidad de revisar los productos que he comprado y el estado de mi pedido.
-
 
 ### Gestor de operaciones
 
@@ -136,10 +128,10 @@ Como Operador, quiero ver el detalle de una queja, con la finalidad de darles se
 Como Operador, quiero editar el detalle de una queja, con la finalidad de darle respuesta y mantener comunicación con nuestros clientes.
 
 ### Gestor de proveedores
+
 #### Registro de proveedor
 
 Como Operador, quiero registrar un proveedor, con la finalidad de mantener un registro actualizado de los proveedores de la empresa
-
 
 #### Consulta de proveedores
 
@@ -186,7 +178,6 @@ En la presente sección se va a describir lo que es un proyecto y el proceso o f
 
 Fundamentalmente, un proyecto está conformado por objetivos, metas y actividades descritas a través de un **plan de trabajo.** El proyecto está acotado por un **alcance** que describe un conjunto de funcionalidades que son de valor para el área solicitante y que deberán ser implementadas por una plataforma informática bajo ciertos criterios preestablecidos. En este sentido, para poder llevar a cabo el proceso de implementación de las funcionalidades se debe diseñar una solución informática que instrumente las acciones, reglas de negocio y flujos de trabajo que se deben de automatizar. La solución informática está conformada por una **arquitectura de software**, a partir de la cual se integran cambios funcionales de manera iterativa e incremental y provenientes de los alcances acordados entre el equipo de desarrollo y el área solicitante. Los incrementos funcionales son requerimientos o especificaciones de software descritos de manera formal a través de historias de usuario y resguardadas en los alcances de cada proyecto. A partir de las historias de usuario se crean los casos de **prueba** a partir de los cuales se valida que se implementó la pieza de software de manera correcta. El proceso de verificación se lleva a cabo a través de los criterios de aceptación y las sesiones demo con los usuarios a partir de los cuales se da un visto bueno a las funcionalidades desarrolladas. Los vistos buenos, planes de trabajo, configuraciones, entre otros elementos, pueden llegar a requerir **formalización**, que implica la firma de aprobación entre el área solicitante y el área de implementación. Una vez que la funcionalidad está lista para ponerse en operación, se deberá de crear o actualizar los **manuales** que dan soporte a la documentación de las funcionalidades desde una perspectiva de usuario final y técnica. 
 
-
 ### Descripción de la estructura documental de un proyecto
 
 La estructura documental de un proyecto es la conformación de carpetas y archivos organizados de manera lógica y por temas que nos permiten estructurar la información de un proyecto con la finalidad de resguardar y localizar la información de manera eficiente. Con la finalidad de resguardar la información generada durante el proceso descrito en la sección “Descripción de un proyecto”, se define una estructura de archivos como la siguiente:
@@ -197,29 +188,25 @@ Estructura documental de un proyecto o plataforma
 
 |                                |                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :----------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|       **Carpeta/Archivo**      |                                                                                                                                                                                         **Descripción**                                                                                                                                                                                         |
+|      **Carpeta/Archivo**       |                                                                                                                                                                                         **Descripción**                                                                                                                                                                                         |
 |         planes-trabajo         |                                   Es la carpeta en la que se guardan todos los planes de trabajo que se han generado para el proyecto en la forma de un tablero taiga o en algún otro formato. Para los planes de trabajo que se generaron utilizando taiga, existe un archivo especial llamado planes.xlsx, en donde se guardan los vínculos a los tableros.                                   |
-|   planes-trabajo/planes.xlsx   |                                                                                                    Este archivo contiene la lista de vínculos a los tableros de la herramienta taiga y que se han creado para la administración de los planes de trabajo del proyecto. Este archivo es único.                                                                                                   |
+|   planes-trabajo/planes.xlsx   |                                                                                                   Este archivo contiene la lista de vínculos a los tableros de la herramienta taiga y que se han creado para la administración de los planes de trabajo del proyecto. Este archivo es único.                                                                                                    |
 |            alcances            |                                                                                      La carpeta en la que se guardan todos los documentos de alcance, historias de usuario y configuraciones que definen el proyecto. Cada documento de alcance hace referencia a un área de negocio, módulo o subsistema.                                                                                      |
-|    alcances/configuraciones    |   En esta carpeta se almacenan las configuraciones realizadas para una plataforma. Las configuraciones son una alternativa a los alcances, donde la plataforma se encuentra en un mayor nivel de madurez y que no requiere de un desarrollo para cumplir con un requerimiento, más bien una configuración. Principalmente, las plataformas que soportan configuración son ápeiron y salsa peo.  |
+|    alcances/configuraciones    |  En esta carpeta se almacenan las configuraciones realizadas para una plataforma. Las configuraciones son una alternativa a los alcances, donde la plataforma se encuentra en un mayor nivel de madurez y que no requiere de un desarrollo para cumplir con un requerimiento, más bien una configuración. Principalmente, las plataformas que soportan configuración son ápeiron y salsa peo.   |
 |          arquitectura          | Se trata de la carpeta en la que se encuentran todos los documentos y modelos que conforman la arquitectura y diseño del sistema de software que brindan apoyo al proyecto. Principalmente en esta carpeta existen 3 documentos **referencias.xlsx**, **modelo.mdj** y **arquitectura.docx**. Se pueden incluir más documentos siempre y cuando estos ayuden a reforzar el diseño del proyecto. |
-|  arquitectura/referencias.xlsx |                                                                                                      En este documento se guardan los vínculos que hacen referencia a un elemento de diseño que se encuentra en alguna otra plataforma o documentación que ha sido publicada de forma web.                                                                                                      |
-|     arquitectura/modelo.mdj    |                                              Es el diseño lógico de la plataforma generado con la herramienta Start UML <https://staruml.io/> y en formato **.mdj** . Cuando este elemento no exista en el formato de mdj, entonces se deberá de incluir la referencia hacia el documento que lo sustituye y se deberá de llamar Modelo de dominio.                                             |
+| arquitectura/referencias.xlsx  |                                                                                                      En este documento se guardan los vínculos que hacen referencia a un elemento de diseño que se encuentra en alguna otra plataforma o documentación que ha sido publicada de forma web.                                                                                                      |
+|    arquitectura/modelo.mdj     |                                             Es el diseño lógico de la plataforma generado con la herramienta Start UML <https://staruml.io/> y en formato **.mdj** . Cuando este elemento no exista en el formato de mdj, entonces se deberá de incluir la referencia hacia el documento que lo sustituye y se deberá de llamar Modelo de dominio.                                              |
 | arquitectura/arquitectura.docx |                                                                                              Es el documento de arquitectura de la plataforma. Cuando este documento no exista, se deberá incluir todos los modelos, imágenes, documentos y vínculos relacionados con la arquitectura del sistema.                                                                                              |
-|             pruebas            |                                                                                                                     En esta carpeta se resguardan las matrices de prueba que se han realizado en el proyecto, con la finalidad de tener el historial de pruebas ejecutadas.                                                                                                                     |
-|          formalizados          |                                                                                                            Es la carpeta en la que se guardan todos los documentos firmados en el proyecto, mayormente son documentos digitalizados que se suben firmados de manera digital o física.                                                                                                           |
-|            manuales            |                                                                            Es la carpeta en la que se guardan los manuales de usuarios que han sido distribuidos a los usuarios finales y que resguardan las instrucciones detalladas para realizar las funcionalidades especificadas en los alcances de un proyecto.                                                                           |
-
-
+|            pruebas             |                                                                                                                     En esta carpeta se resguardan las matrices de prueba que se han realizado en el proyecto, con la finalidad de tener el historial de pruebas ejecutadas.                                                                                                                     |
+|          formalizados          |                                                                                                           Es la carpeta en la que se guardan todos los documentos firmados en el proyecto, mayormente son documentos digitalizados que se suben firmados de manera digital o física.                                                                                                            |
+|            manuales            |                                                                           Es la carpeta en la que se guardan los manuales de usuarios que han sido distribuidos a los usuarios finales y que resguardan las instrucciones detalladas para realizar las funcionalidades especificadas en los alcances de un proyecto.                                                                            |
 
 El proyecto, se deberá de llevar con un enfoque de desarrollo ágil, que permita dar seguimiento de manera periódica y que se pueda ir revisando el estado del proyecto de manera iterativa e incremental.
-
 
 ## Lista de herramientas
 
 1. Visual studio code
 2. Staruml
-
 
 ## Entregables del proyecto
 
@@ -234,4 +221,4 @@ El proyecto, se deberá de llevar con un enfoque de desarrollo ágil, que permit
 
 La evaluación del proyecto se llevará a cabo mediante el checklist definido en el siguiente vínculo:
 
-[**https://docs.google.com/spreadsheets/d/1uMmPhXwkc4bBaWxjUFa1GFkn9gLnaMFLseUf2sruxxo/edit?usp=drive\_link**](https://docs.google.com/spreadsheets/d/1uMmPhXwkc4bBaWxjUFa1GFkn9gLnaMFLseUf2sruxxo/edit?usp=drive_link)
+[**https://docs.google.com/spreadsheets/d/1uMmPhXwkc4bBaWxjUFa1GFkn9gLnaMFLseUf2sruxxo/edit?usp=drive_link**](https://docs.google.com/spreadsheets/d/1uMmPhXwkc4bBaWxjUFa1GFkn9gLnaMFLseUf2sruxxo/edit?usp=drive_link)

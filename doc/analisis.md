@@ -1,4 +1,4 @@
-# Análisis y diseño
+# :art: Análisis y diseño
 
 ## Diagrama de contexto para la plataforma
 
@@ -10,7 +10,7 @@ A continuación se muestra el diagrama de contexto para **Lacandon**:
     C4Context
       Person(Cliente, "Cliente")
       Person(Operador, "Operador")
-      
+
       Enterprise_Boundary(b0, "Plataforma Lacandon") {
 
         System(Auth, "Autenticación y<br> Autorización")
@@ -30,7 +30,7 @@ Funcionalidades del **Cliente**
 ```mermaid
     C4Context
       Person(Cliente, "Cliente")
-      
+
       Enterprise_Boundary(b0, "Plataforma Lacandon") {
 
         System(Auth, "Autenticación y<br> Autorización")
@@ -51,10 +51,9 @@ Funcionalidades del **Cliente**
 
 ## Casos de uso
 
-Los casos de uso son modelos que describen cómo los usuarios interactúan con un sistema. Se representan mediante diagramas de casos de uso. 
+Los casos de uso son modelos que describen cómo los usuarios interactúan con un sistema. Se representan mediante diagramas de casos de uso.
 
 A continuación se presentan los macro casos de uso que conforman a la plataforma lacandon
-
 
 ![Casos de uso](../doc/plantuml-out/doc/casos-de-uso/casos-de-uso/casos-de-uso.svg)
 
@@ -78,11 +77,9 @@ Como Operador, quiero consultar el detalle de un proveedor, con la finalidad de 
 
 Como operador, quiero dar de baja a un proveedor, con la finalidad de mantener actualizado el registro de proveedores vigentes de la empresa.
 
-
 ### Gestor de inventario
 
 ![Gestor de inventario](../doc/plantuml-out/doc/casos-de-uso/inventario/inventario.svg)
-
 
 ### Gestor de Ventas
 
@@ -90,31 +87,29 @@ Como operador, quiero dar de baja a un proveedor, con la finalidad de mantener a
 
 Registro de pedidos:
 
-Como Cliente,  quiero buscar un producto dentro del sistema, con la finalidad de comprarlo o agregarlo a mi carrito de compra.
+Como Cliente, quiero buscar un producto dentro del sistema, con la finalidad de comprarlo o agregarlo a mi carrito de compra.
 
-Como Cliente,  quiero agregar un producto a mi carrito de compra, con la finalidad de comprarlo o apartarlo para más tarde
+Como Cliente, quiero agregar un producto a mi carrito de compra, con la finalidad de comprarlo o apartarlo para más tarde
 
-Como Cliente,  quiero consultar el contenido de mi carrito de compra, con la finalidad de administrar su contenido o proceder a su compra.
+Como Cliente, quiero consultar el contenido de mi carrito de compra, con la finalidad de administrar su contenido o proceder a su compra.
 
+Como Cliente, quiero quitar un producto de mi carrito de compra, con la finalidad de que no sea procesado durante el pago de mi cuenta.
 
-Como Cliente,  quiero quitar un producto de mi carrito de compra, con la finalidad de que no sea procesado durante el pago de mi cuenta.
+Como Cliente, quiero ver el detalle de un producto, con la finalidad de verificar que es el más adecuado para comprar
 
-Como Cliente,  quiero ver el detalle de un producto, con la finalidad de verificar que es el más adecuado para comprar
+Como Cliente, quiero ver el detalle de un producto, con la finalidad de verificar que es el más adecuado para comprar.
 
-Como Cliente,  quiero ver el detalle de un producto, con la finalidad de verificar que es el más adecuado para comprar.
+Como Cliente, quiero ver el detalle de un producto, con la finalidad de verificar que es el más adecuado para comprar.
 
-Como Cliente,  quiero ver el detalle de un producto, con la finalidad de verificar que es el más adecuado para comprar.
+Como Cliente, quiero llevar a cabo la compra de los productos contenidos en mi carrito, con la finalidad de adquirirlos y pagar por ellos.
 
-Como Cliente,  quiero llevar a cabo la compra de los productos contenidos en mi carrito, con la finalidad de adquirirlos y pagar por ellos.
-
-Como Cliente,  quiero registrar la dirección a la que me deberán de llegar mis productos, con la finalidad de que mis productos lleguen al lugar correcto.
+Como Cliente, quiero registrar la dirección a la que me deberán de llegar mis productos, con la finalidad de que mis productos lleguen al lugar correcto.
 
 Consulta de pedidos
 
-Como Cliente,  quiero consultar la lista de pedidos que he realizado, con la finalidad de consultar el estado en el que se encuentra cada uno y poder administrarlos.
+Como Cliente, quiero consultar la lista de pedidos que he realizado, con la finalidad de consultar el estado en el que se encuentra cada uno y poder administrarlos.
 
-Como Cliente,  quiero consultar el detalle de un pedido, con la finalidad de revisar los productos que he comprado y el estado de mi pedido.
-
+Como Cliente, quiero consultar el detalle de un pedido, con la finalidad de revisar los productos que he comprado y el estado de mi pedido.
 
 ### Gestor de operaciones
 
@@ -122,15 +117,14 @@ Como Cliente,  quiero consultar el detalle de un pedido, con la finalidad de rev
 
 Consulta de pedidos
 
-Como Operador,  quiero consultar la lista de pedidos que se han realizado, con la finalidad de administrarlos y proceder a su repartición.
+Como Operador, quiero consultar la lista de pedidos que se han realizado, con la finalidad de administrarlos y proceder a su repartición.
 
-Como Operador,  quiero ver el detalle de un pedido, con la finalidad de ver los productos que se han solicitado y el estado en el que se encuentra el pedido.
-Como Operador,  quiero ver el detalle de un pedido, con la finalidad de ver los productos que se han solicitado, consultar el estado en el que se encuentra el pedido y actualizarlo.
+Como Operador, quiero ver el detalle de un pedido, con la finalidad de ver los productos que se han solicitado y el estado en el que se encuentra el pedido.
+Como Operador, quiero ver el detalle de un pedido, con la finalidad de ver los productos que se han solicitado, consultar el estado en el que se encuentra el pedido y actualizarlo.
 
-Como Operador,  quiero actualizar el estado de los pedidos que se encuentran en enviado y pasarlos al estado de enviado, con la finalidad de dar seguimiento al pedido.
+Como Operador, quiero actualizar el estado de los pedidos que se encuentran en enviado y pasarlos al estado de enviado, con la finalidad de dar seguimiento al pedido.
 
-Como Operador,  quiero cancelar un pedido, con la finalidad de que no sea procesado ni enviado a su destino.
-
+Como Operador, quiero cancelar un pedido, con la finalidad de que no sea procesado ni enviado a su destino.
 
 ### Gestor de quejas
 
@@ -138,7 +132,7 @@ Como Operador,  quiero cancelar un pedido, con la finalidad de que no sea proces
 
 Registro de quejas
 
-Como Cliente, quiero registrar una queja, con la finalidad de reportar un incumplimiento, reportar un mal funcionamiento de un producto o simplemente expresar mi opinión sobre el servicio y atención que se me oficio. 
+Como Cliente, quiero registrar una queja, con la finalidad de reportar un incumplimiento, reportar un mal funcionamiento de un producto o simplemente expresar mi opinión sobre el servicio y atención que se me oficio.
 
 Consulta de quejas
 
@@ -152,16 +146,13 @@ Como Operador, quiero realizar una búsqueda parametrizada de las quejas que han
 
 Como Operador, quiero ver el detalle de una queja, con la finalidad de darles seguimiento.
 
-
 Como Operador, quiero editar el detalle de una queja, con la finalidad de darle respuesta y mantener comunicación con nuestros clientes.
-
 
 ## Modelo de dominio
 
 Un modelo de dominio es una representación de los conceptos, reglas y relaciones que definen un dominio de problema.
 
 En la siguiente figura, se muestra el modelo de dominio simplificado para la plataforma **Lacandon**:
-
 
 ```mermaid
 
@@ -237,7 +228,7 @@ classDiagram
         Long id
         String nombre
         String descripcion
-        Double precio 
+        Double precio
         Blob imagen
         String contentType
         Long cantidad
