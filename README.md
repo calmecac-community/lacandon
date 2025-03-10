@@ -1,6 +1,5 @@
 # 🌳 Plataforma Lacandon
 
-
 👋🏼 Bienvenido a la plataforma Lacandon 🛒
 
 ## Secciones
@@ -9,7 +8,7 @@
 2. [Requerimientos](doc/requerimiento.md)
 3. [Análisis y diseño](doc/analisis.md)
 4. [Implementación](doc/implementacion.md)
-5. [Puesta en operación (Próximamente)](doc/operacion.md)
+5. [Puesta en operación](doc/operacion.md)
 
 [![License: MIT](https://cdn.prod.website-files.com/5e0f1144930a8bc8aace526c/65dd9eb5aaca434fac4f1c34_License-MIT-blue.svg)](/LICENSE)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
