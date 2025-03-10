@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    mx.calmecac.lacandon.config.SqlTestContainersSpringContextCustomizerFactory
