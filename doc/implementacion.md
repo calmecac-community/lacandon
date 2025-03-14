@@ -163,6 +163,23 @@ classDiagram
 
 ```
 
+### Vista en Git
+
+```mermaid
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   branch feature/gestor-inventario
+   commit
+   commit
+   checkout develop
+   merge feature/gestor-inventario
+```
+
 ### Actividad
 
 Sigue las instrucciones para generar este módulo utiizando **Jhipster**
@@ -175,6 +192,102 @@ Sigue las instrucciones para generar este módulo utiizando **Jhipster**
 6. En otra terminal, levanta el frontend con el comando `./npmw start`
 7. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
 8. Si todo está correcto, crea un commit de tu código generado con el commando `git add .` y después `git commit -m "Se agrega el gestor de inventario"`
+
+# :tada: !Felicidades!
+
+Has logrado generar tu primer componente utlizando **Jhipster**.
+
+## Implementación del Gestor de quejas
+
+### Caso de uso
+
+El **gestor de quejas** se encuentra definido en el documento [Gestor de quejas](../doc/analisis.md). En resúmen, tenemos que implementar el caso de uso y las pantallas que lo acompañan:
+
+![Gestor de quejas](../doc/plantuml-out/doc/casos-de-uso/quejas/quejas.svg)
+
+### Pantallas
+
+Las pantallas que conforman el caso de uso son:
+
+![text](../doc/img/gestor-quejas.svg)
+
+### Modelo de dominio
+
+El modelo de dominio que brinda persistencia al caso de uso es el siguiente:
+
+```mermaid
+
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': 'white',
+      'primaryTextColor': 'black',
+      'primaryBorderColor': 'black',
+      'lineColor': 'black'
+    }
+  }
+}%%
+classDiagram
+
+    Queja --> EstadoQueja
+
+
+    class Queja {
+        Long id
+        String descripcion
+        String comentarios
+        EstadoQueja estado
+    }
+
+    class EstadoQueja{
+        <<Enumeración>>
+        REGISTRADA
+        ASIGNADA
+        RECHAZADA
+        CERRADA
+    }
+
+```
+
+### Vista Git
+
+```mermaid
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   branch feature/gestor-inventario
+   commit
+   commit
+   commit
+   checkout develop
+   merge feature/gestor-inventario
+   commit
+   branch feature/gestor-queja
+   commit
+   commit
+   checkout develop
+   merge feature/gestor-queja
+   commit
+   checkout main
+   merge develop
+   commit
+```
+
+### Actividad
+
+Sigue las instrucciones para generar este módulo utiizando **Jhipster**
+
+1. Actualizar el archivo `entities.jdl` con la entidad de Quejas y su respectivo estado de acuerdo con el diagrama de dominio.
+2. Genera las pantallas, backend y base de datos con el comando `jhipster import-jdl entities.jdl`
+3. En una terminal, levanta el backend con el comando `./mvnw`
+4. En otra terminal, levanta el frontend con el comando `./npmw start`
+5. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
+6. Si todo está correcto, crea un commit de tu código generado con el commando `git add .` y después `git commit -m "Se agrega el gestor de quejas"`
 
 # :tada: !Felicidades!
 
