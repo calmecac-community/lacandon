@@ -105,15 +105,67 @@ Has logrado terminar la primera actividad del proyecto final.
 
 ## Implementación del Gestor de inventario
 
+### Caso de uso
+
 El **gestor de inventario** se encuentra definido en el documento [Gestor de inventario](../doc/analisis.md). En resúmen, tenemos que implementar el caso de uso y las pantallas que lo acompañan:
 
 ![Gestor de inventario](../doc/plantuml-out/doc/casos-de-uso/inventario/inventario.svg)
+
+### Pantallas
 
 Las pantallas que conforman el caso de uso son:
 
 ![text](../doc/img/gestor-inventario.svg)
 
-Sigue las instrucciones para generar este módulo utiizando **JHIPSTER**
+### Modelo de dominio
+
+El modelo de dominio que brinda persistencia al caso de uso es el siguiente:
+
+```mermaid
+
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': 'white',
+      'primaryTextColor': 'black',
+      'primaryBorderColor': 'black',
+      'lineColor': 'black'
+    }
+  }
+}%%
+classDiagram
+
+    Producto --> Categoria
+
+
+    class Producto {
+        <<Catálogo>>
+        Long id
+        String nombre
+        String descripcion
+        Double precio
+        Blob imagen
+        String contentType
+        Long cantidad
+        Catetoria categoria
+    }
+
+    class Categoria {
+        <<Enumeración>>
+        ALIMENTOS
+        TECNOLOGIA
+        ROPA_Y_ZAPATERIA
+        MASCOTAS
+        FARMACIA
+        JUGUETERIA
+    }
+
+```
+
+### Actividad
+
+Sigue las instrucciones para generar este módulo utiizando **Jhipster**
 
 1. Crea el módelo de dominio para la entidad Producto(Inventario) utilizando el modelador [JDL Studio](https://start.jhipster.tech/jdl-studio/)
 2. En tu proyecto local de git, crear una nueva rama llamada `feature/gestor-inventario`con el siguiente comando `git checkout -b feature/gestor-inventario`
