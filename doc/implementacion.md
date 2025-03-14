@@ -116,11 +116,13 @@ Las pantallas que conforman el caso de uso son:
 Sigue las instrucciones para generar este módulo utiizando **JHIPSTER**
 
 1. Crea el módelo de dominio para la entidad Producto(Inventario) utilizando el modelador [JDL Studio](https://start.jhipster.tech/jdl-studio/)
-2. Descarga modelo generado en la raiz del proyecto y guardalo con el nombre `entities.jdl`
-3. Genera las pantallas, backend y base de datos con el comando `jhipster import-jdl entities.jdl`
-4. En una terminal, levanta el backend con el comando `./mvnw`
-5. En otra terminal, levanta el frontend con el comando `./npmw start`
-6. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
+2. En tu proyecto local de git, crear una nueva rama llamada `feature/gestor-inventario`con el siguiente comando `git checkout -b feature/gestor-inventario`
+3. Descarga modelo generado en la raiz del proyecto y guardalo con el nombre `entities.jdl`
+4. Genera las pantallas, backend y base de datos con el comando `jhipster import-jdl entities.jdl`
+5. En una terminal, levanta el backend con el comando `./mvnw`
+6. En otra terminal, levanta el frontend con el comando `./npmw start`
+7. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
+8. Si todo está correcto, crea un commit de tu código generado con el commando `git add .` y después `git commit -m "Se agrega el gestor de inventario"`
 
 # :tada: !Felicidades!
 
