@@ -12,14 +12,15 @@ actor Cliente <<User>> #APPLICATION
 package "Gestor de quejas" #APPLICATION{
   usecase "<b>(1)</b> Consultar quejas" as consultarQuejas
   usecase "<b>(2)</b> Registrar una nueva queja" as registrarQueja
-  usecase "<b>(3)</b> Editar una Queja" as editarQueja
+  usecase "<b>(3)</b> Ver detalle de una Queja" as verQueja
+  usecase "<b>(3.1)</b> Editar una Queja" as editarQueja
 }
 
 Operador -up-> consultarQuejas
 Operador -up-> editarQueja
 
 Cliente --> consultarQuejas
-Cliente --> editarQueja
+Cliente --> verQueja
 Cliente --> registrarQueja
 
 @enduml

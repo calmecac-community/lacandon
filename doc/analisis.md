@@ -81,6 +81,10 @@ Como operador, quiero dar de baja a un proveedor, con la finalidad de mantener a
 
 ![Gestor de inventario](../doc/plantuml-out/doc/casos-de-uso/inventario/inventario.svg)
 
+A continuación se muestran las pantallas que implementan los casos de uso de **Gestor de inventario**:
+
+![alt text](../doc/img/gestor-inventario.svg)
+
 ### Gestor de Ventas
 
 ![Gestor de ventas](../doc/plantuml-out/doc/casos-de-uso/ventas/ventas.svg)
@@ -129,6 +133,10 @@ Como Operador, quiero cancelar un pedido, con la finalidad de que no sea procesa
 ### Gestor de quejas
 
 ![Gestor de quejas](../doc/plantuml-out/doc/casos-de-uso/quejas/quejas.svg)
+
+A continuación se muestran las pantallas que implementan los casos de uso de **Gestor de quejas**:
+
+![alt text](../doc/img/gestor-quejas.svg)
 
 Registro de quejas
 
