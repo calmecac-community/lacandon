@@ -102,3 +102,26 @@ password: admin
 # :tada: !Felicidades!
 
 Has logrado terminar la primera actividad del proyecto final.
+
+## Implementación del Gestor de inventario
+
+El **gestor de inventario** se encuentra definido en el documento [Gestor de inventario](../doc/analisis.md). En resúmen, tenemos que implementar el caso de uso y las pantallas que lo acompañan:
+
+![Gestor de inventario](../doc/plantuml-out/doc/casos-de-uso/inventario/inventario.svg)
+
+Las pantallas que conforman el caso de uso son:
+
+![text](../doc/img/gestor-inventario.svg)
+
+Sigue las instrucciones para generar este módulo utiizando **JHIPSTER**
+
+1. Crea el módelo de dominio para la entidad Producto(Inventario) utilizando el modelador [JDL Studio](https://start.jhipster.tech/jdl-studio/)
+2. Descarga modelo generado en la raiz del proyecto y guardalo con el nombre `entities.jdl`
+3. Genera las pantallas, backend y base de datos con el comando `jhipster import-jdl entities.jdl`
+4. En una terminal, levanta el backend con el comando `./mvnw`
+5. En otra terminal, levanta el frontend con el comando `./npmw start`
+6. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
+
+# :tada: !Felicidades!
+
+Has logrado generar tu primer componente utlizando **Jhipster**.
