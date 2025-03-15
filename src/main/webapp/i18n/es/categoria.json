@@ -1,0 +1,13 @@
+{
+  "lacandonApp": {
+    "Categoria": {
+      "null": "",
+      "ALIMENTOS": "ALIMENTOS",
+      "TECNOLOGIA": "TECNOLOGIA",
+      "ROPA_Y_ZAPATERIA": "ROPA_Y_ZAPATERIA",
+      "MASCOTAS": "MASCOTAS",
+      "FARMACIA": "FARMACIA",
+      "JUGUETERIA": "JUGUETERIA"
+    }
+  }
+}

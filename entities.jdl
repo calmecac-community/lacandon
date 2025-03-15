@@ -1,0 +1,11 @@
+entity Producto {
+    nombre String
+    descripcion String
+    precio Double
+    imagen ImageBlob
+    cantidad Long
+    categoria Categoria
+}
+enum Categoria {
+  ALIMENTOS, TECNOLOGIA, ROPA_Y_ZAPATERIA, MASCOTAS, FARMACIA, JUGUETERIA
+}

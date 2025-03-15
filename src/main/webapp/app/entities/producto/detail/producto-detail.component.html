@@ -1,0 +1,75 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (producto(); as productoRef) {
+      <div>
+        <h2 data-cy="productoDetailsHeading"><span jhiTranslate="lacandonApp.producto.detail.title">Producto</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ productoRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="lacandonApp.producto.nombre">Nombre</span></dt>
+          <dd>
+            <span>{{ productoRef.nombre }}</span>
+          </dd>
+          <dt><span jhiTranslate="lacandonApp.producto.descripcion">Descripcion</span></dt>
+          <dd>
+            <span>{{ productoRef.descripcion }}</span>
+          </dd>
+          <dt><span jhiTranslate="lacandonApp.producto.precio">Precio</span></dt>
+          <dd>
+            <span>{{ productoRef.precio }}</span>
+          </dd>
+          <dt><span jhiTranslate="lacandonApp.producto.imagen">Imagen</span></dt>
+          <dd>
+            @if (productoRef.imagen) {
+              <div>
+                <a (click)="openFile(productoRef.imagen ?? '', productoRef.imagenContentType)">
+                  <img
+                    [src]="'data:' + productoRef.imagenContentType + ';base64,' + productoRef.imagen"
+                    style="max-width: 100%"
+                    alt="producto"
+                  />
+                </a>
+                {{ productoRef.imagenContentType }}, {{ byteSize(productoRef.imagen ?? '') }}
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="lacandonApp.producto.cantidad">Cantidad</span></dt>
+          <dd>
+            <span>{{ productoRef.cantidad }}</span>
+          </dd>
+          <dt><span jhiTranslate="lacandonApp.producto.categoria">Categoria</span></dt>
+          <dd>
+            <span [jhiTranslate]="'lacandonApp.Categoria.' + (productoRef.categoria ?? 'null')">{{
+              {
+                null: '',
+                ALIMENTOS: 'ALIMENTOS',
+                TECNOLOGIA: 'TECNOLOGIA',
+                ROPA_Y_ZAPATERIA: 'ROPA_Y_ZAPATERIA',
+                MASCOTAS: 'MASCOTAS',
+                FARMACIA: 'FARMACIA',
+                JUGUETERIA: 'JUGUETERIA',
+              }[productoRef.categoria ?? 'null']
+            }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Volver</span>
+        </button>
+
+        <button type="button" [routerLink]="['/producto', productoRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

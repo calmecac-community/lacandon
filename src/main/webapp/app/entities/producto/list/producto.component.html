@@ -1,0 +1,147 @@
+<div>
+  <h2 id="page-heading" data-cy="ProductoHeading">
+    <span jhiTranslate="lacandonApp.producto.home.title">Productos</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="lacandonApp.producto.home.refreshListLabel">Refrescar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-producto"
+        [routerLink]="['/producto/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="lacandonApp.producto.home.createLabel">Crear nuevo Producto</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (productos().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="lacandonApp.producto.home.notFound">Ningún Productos encontrado</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nombre">
+              <div class="d-flex">
+                <span jhiTranslate="lacandonApp.producto.nombre">Nombre</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descripcion">
+              <div class="d-flex">
+                <span jhiTranslate="lacandonApp.producto.descripcion">Descripcion</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="precio">
+              <div class="d-flex">
+                <span jhiTranslate="lacandonApp.producto.precio">Precio</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="imagen">
+              <div class="d-flex">
+                <span jhiTranslate="lacandonApp.producto.imagen">Imagen</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cantidad">
+              <div class="d-flex">
+                <span jhiTranslate="lacandonApp.producto.cantidad">Cantidad</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categoria">
+              <div class="d-flex">
+                <span jhiTranslate="lacandonApp.producto.categoria">Categoria</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (producto of productos(); track trackId(producto)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/producto', producto.id, 'view']">{{ producto.id }}</a>
+              </td>
+              <td>{{ producto.nombre }}</td>
+              <td>{{ producto.descripcion }}</td>
+              <td>{{ producto.precio }}</td>
+              <td>
+                @if (producto.imagen) {
+                  <a (click)="openFile(producto.imagen, producto.imagenContentType)">
+                    <img
+                      [src]="'data:' + producto.imagenContentType + ';base64,' + producto.imagen"
+                      style="max-height: 30px"
+                      alt="producto"
+                    />
+                  </a>
+                  <span>{{ producto.imagenContentType }}, {{ byteSize(producto.imagen) }}</span>
+                }
+              </td>
+              <td>{{ producto.cantidad }}</td>
+              <td [jhiTranslate]="'lacandonApp.Categoria.' + (producto.categoria ?? 'null')">
+                {{
+                  {
+                    null: '',
+                    ALIMENTOS: 'ALIMENTOS',
+                    TECNOLOGIA: 'TECNOLOGIA',
+                    ROPA_Y_ZAPATERIA: 'ROPA_Y_ZAPATERIA',
+                    MASCOTAS: 'MASCOTAS',
+                    FARMACIA: 'FARMACIA',
+                    JUGUETERIA: 'JUGUETERIA',
+                  }[producto.categoria ?? 'null']
+                }}
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/producto', producto.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Vista</span>
+                  </a>
+
+                  <a [routerLink]="['/producto', producto.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(producto)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Eliminar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20250315031221"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "imagen",
+      "fieldType": "ImageBlob"
+    },
+    {
+      "fieldName": "cantidad",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "categoria",
+      "fieldType": "Categoria",
+      "fieldValues": "ALIMENTOS,TECNOLOGIA,ROPA_Y_ZAPATERIA,MASCOTAS,FARMACIA,JUGUETERIA"
+    }
+  ],
+  "name": "Producto",
+  "relationships": [],
+  "searchEngine": "no"
+}
