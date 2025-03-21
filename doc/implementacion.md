@@ -41,7 +41,7 @@ Cambiate al nuevo directorio con el comando:
 cp lacandon
 ```
 
-!Listo!
+¡Listo!
 
 ## Levantar la base de datos PostgreSQL
 
@@ -99,7 +99,7 @@ usuario: admin
 password: admin
 ```
 
-# :tada: !Felicidades!
+# :tada: ¡Felicidades!
 
 Has logrado terminar la primera actividad del proyecto final.
 
@@ -193,7 +193,7 @@ Sigue las instrucciones para generar este módulo utiizando **Jhipster**
 7. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
 8. Si todo está correcto, crea un commit de tu código generado con el commando `git add .` y después `git commit -m "Se agrega el gestor de inventario"`
 
-# :tada: !Felicidades!
+# :tada: ¡Felicidades!
 
 Has logrado generar tu primer componente utlizando **Jhipster**.
 
@@ -289,6 +289,138 @@ Sigue las instrucciones para generar este módulo utiizando **Jhipster**
 5. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
 6. Si todo está correcto, crea un commit de tu código generado con el commando `git add .` y después `git commit -m "Se agrega el gestor de quejas"`
 
-# :tada: !Felicidades!
+# :tada: ¡Felicidades!
+
+Has logrado generar tu primer componente utlizando **Jhipster**.
+
+
+## Implementación del Gestor de ventas
+
+### Caso de uso
+
+El **gestor de ventas** se encuentra definido en el documento [Gestor de ventas](../doc/analisis.md). En resúmen, tenemos que implementar el caso de uso y las pantallas que lo acompañan:
+
+![Gestor de ventas](../doc/plantuml-out/doc/casos-de-uso/ventas/ventas.svg)
+
+### Pantallas
+
+Las pantallas que conforman el caso de uso son:
+
+![text](../doc/img/gestor-ventas.svg)
+
+### Modelo de dominio
+
+El modelo de dominio que brinda persistencia al caso de uso es el siguiente:
+
+```mermaid
+
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': 'white',
+      'primaryTextColor': 'black',
+      'primaryBorderColor': 'black',
+      'lineColor': 'black'
+    }
+  }
+}%%
+classDiagram
+
+    Carrito --> EstadoCarrito
+    Carrito -- "1..*" RegistroProducto
+    RegistroProducto "1..*" -- Producto
+    Producto --> Categoria
+
+    class EstadoCarrito {
+        <<Enumeración>>
+        CREADO
+        SOLICITADO
+        RECHAZADO
+        ENTREGADO
+    }
+
+    class Carrito {
+        Long id
+        Long usuarioId
+        Instant fechaCreacion
+        EstadoCarrito estado
+
+    }
+
+    class RegistroProducto {
+        <<Asociación>>
+        Long carritoId
+        Long productoId
+    }
+
+    class Producto {
+        <<Catálogo>>
+        Long id
+        String nombre
+        String descripcion
+        Double precio
+        Blob imagen
+        String contentType
+        Long cantidad
+    }
+
+    class Categoria {
+        <<Enumeración>>
+        ALIMENTOS
+        TECNOLOGIA
+        ROPA_Y_ZAPATERIA
+        MASCOTAS
+        FARMACIA
+        JUGUETERIA
+    }
+
+```
+
+### Vista Git
+
+```mermaid
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   branch feature/gestor-inventario
+   commit
+   commit
+   commit
+   checkout develop
+   merge feature/gestor-inventario
+   commit
+   branch feature/gestor-queja
+   commit
+   commit
+   checkout develop
+   merge feature/gestor-queja
+   commit
+   branch feature/gestor-ventas
+   commit
+   commit
+   checkout develop
+   merge feature/gestor-ventas
+   commit
+   checkout main
+   merge develop tag: "v1.0.0"
+```
+
+### Actividad
+
+Sigue las instrucciones para generar este módulo utiizando **Jhipster**
+
+1. Actualizar el archivo `entities.jdl` con las entidades requeridas por el gestor de ventas. Utilizar el diagrama de dominio como referencia.
+2. Genera las pantallas, backend y base de datos con el comando `jhipster import-jdl entities.jdl`
+3. En una terminal, levanta el backend con el comando `./mvnw`
+4. En otra terminal, levanta el frontend con el comando `./npmw start`
+5. Prueba el aplicativo genearado en un navegador web en la ruta [http://localhost:9000](http://localhost:9000)
+6. Si todo está correcto, crea un commit de tu código generado con el commando `git add .` y después `git commit -m "Se agrega el gestor de ventas"`
+
+# :tada: ¡Felicidades!
 
 Has logrado generar tu primer componente utlizando **Jhipster**.
